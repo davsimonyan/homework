@@ -13,7 +13,7 @@ public class ArraySpaceExample {
             }
 
         }
-        ;
+
         for (int i = spaceArray.length - 1; i > 0; i--) {
             if (spaceArray[i] != ' ') {
                 end = i;
@@ -21,15 +21,11 @@ public class ArraySpaceExample {
             }
         }
 
-
         char[] result = new char[end - start + 1];
         for (int i = 0; i < result.length; i++) {
             result[i] = spaceArray[start];
             start++;
             System.out.print(result[i]);
-
         }
-
-
     }
 }
