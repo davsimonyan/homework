@@ -17,11 +17,19 @@ public class Stack {
         }
     }
 
-    public int pop() {
+    public char pop() {
         if (size < 0) {
             return 0;
         } else {
-            return array[size--];
+            return (char) array[size--];
         }
+    }
+
+    public boolean isEmpty() {
+        if (size == -1) {
+            return true;
+        }
+        return false;
+
     }
 }

@@ -40,8 +40,16 @@ public class BraceChecker {
                     }
                     break;
                 default:
+
             }
         }
+        while (!myStack.isEmpty()) {
+            System.err.println("Error: opened " + myStack.pop() + " but dont closed");
+        }
+
+
     }
+
 }
+
 
