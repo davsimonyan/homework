@@ -8,7 +8,7 @@ public class DynamicArray {
 
     public void add(int valeu) {
         if (size == array.length) {
-            isEsempti();
+            extend();
         }
         array[size++] = valeu;
     }
@@ -20,7 +20,7 @@ public class DynamicArray {
 
     }
 
-    private void isEsempti() {
+    private void extend() {
         if (size == array.length) {
             int[] temp = new int[array.length + 10];
             for (int i = 0; i < size; i++) {
