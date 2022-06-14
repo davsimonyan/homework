@@ -5,9 +5,23 @@ public class DynamicArrayDemo {
 
 
         DynamicArray dynamicArray = new DynamicArray();
-        for (int i = 0; i <= 25; i++) {
-            dynamicArray.add(i);
-            dynamicArray.print();
-        }
+        dynamicArray.add(42);
+        dynamicArray.add(55);
+        dynamicArray.add(900);
+        dynamicArray.add(27);
+        dynamicArray.add(62);
+        dynamicArray.add(2);
+        dynamicArray.add(4);
+        dynamicArray.add(5);
+
+        System.out.println(dynamicArray.isEmpty());
+        System.out.println(dynamicArray.getByIndex(4));
+        System.out.println(dynamicArray.getFirstIndexByValue(2));
+        dynamicArray.set(2, 500);
+        dynamicArray.add(0, 9);
+        dynamicArray.delete(1);
+        dynamicArray.print();
+
+
     }
 }
