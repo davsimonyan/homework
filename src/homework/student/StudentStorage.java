@@ -1,6 +1,9 @@
 package homework.student;
 
+import java.util.Scanner;
+
 public class StudentStorage {
+    private static Scanner scanner = new Scanner(System.in);
 
     private Student[] array = new Student[10];
     private int size = -1;
@@ -52,6 +55,12 @@ public class StudentStorage {
 
     public int getSize() {
         return size;
+    }
+
+    public void changeLesson(int indexName) {
+       array[indexName].setLesson(scanner.nextLine());
+        System.out.println(array[indexName]);
+
     }
 }
 

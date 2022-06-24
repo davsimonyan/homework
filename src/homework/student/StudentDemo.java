@@ -16,6 +16,7 @@ public class StudentDemo {
             System.out.println("please input 3 for delete student by index");
             System.out.println("please input 4 for print student by lesson");
             System.out.println("please input 5 for print students count");
+            System.out.println("please choose 6 for change student's lesson");
             int command = Integer.parseInt(scanner.nextLine());
             switch (command) {
                 case 0:
@@ -34,7 +35,7 @@ public class StudentDemo {
                     studentStorage.delete(index);
                     break;
                 case 4:
-                    System.out.println("please imput lesson name");
+                    System.out.println("please input lesson name");
                     String lessonName = scanner.nextLine();
                     studentStorage.printStudentByLessonName(lessonName);
                     break;
@@ -42,6 +43,13 @@ public class StudentDemo {
                     System.out.println("students count:");
                     System.out.println(studentStorage.getSize());
                     break;
+                case 6:
+                    studentStorage.print();
+                    System.out.println("please choose student index");
+                    int indexName=Integer.parseInt(scanner.nextLine());
+                    studentStorage.changeLesson(indexName);
+                    break;
+
                 default:
                     System.out.println("Invalid command");
             }
