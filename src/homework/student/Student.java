@@ -10,7 +10,6 @@ public class Student {
     private String lesson;
 
 
-
     public Student(String name, String surname, int age, String phoneNumber, String city, String lesson) {
         this.name = name;
         this.surname = surname;
@@ -71,7 +70,6 @@ public class Student {
     public void setLesson(String lesson) {
         this.lesson = lesson;
     }
-
 
 
     @Override

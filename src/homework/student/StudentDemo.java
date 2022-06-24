@@ -46,7 +46,7 @@ public class StudentDemo {
                 case 6:
                     studentStorage.print();
                     System.out.println("please choose student index");
-                    int indexName=Integer.parseInt(scanner.nextLine());
+                    int indexName = Integer.parseInt(scanner.nextLine());
                     studentStorage.changeLesson(indexName);
                     break;
 

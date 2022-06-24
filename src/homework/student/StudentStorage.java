@@ -35,7 +35,7 @@ public class StudentStorage {
     }
 
     public void delete(int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 || index > size) {
             System.out.println("invalid index");
         } else {
             for (int i = index; i < size; i++) {
@@ -54,11 +54,11 @@ public class StudentStorage {
     }
 
     public int getSize() {
-        return size;
+        return size+1;
     }
 
     public void changeLesson(int indexName) {
-       array[indexName].setLesson(scanner.nextLine());
+        array[indexName].setLesson(scanner.nextLine());
         System.out.println(array[indexName]);
 
     }
