@@ -51,7 +51,7 @@ public class StudentDemo {
                     break;
 
                 default:
-                    System.out.println("Invalid command");
+                    System.err.println("Invalid command");
             }
         }
 
@@ -59,17 +59,17 @@ public class StudentDemo {
     }
 
     private static void addStudent() {
-        System.out.println("Please inout student's name");
+        System.out.println("Please input student's name");
         String name = scanner.nextLine();
-        System.out.println("Please inout student's surname");
+        System.out.println("Please input student's surname");
         String surname = scanner.nextLine();
-        System.out.println("Please inout student's age");
+        System.out.println("Please input student's age");
         String ageStr = scanner.nextLine();
-        System.out.println("Please inout student's phoneNumber");
+        System.out.println("Please input student's phoneNumber");
         String phoneNumber = scanner.nextLine();
-        System.out.println("Please inout student's city");
+        System.out.println("Please input student's city");
         String city = scanner.nextLine();
-        System.out.println("Please inout student's lesson");
+        System.out.println("Please input student's lesson");
         String lesson = scanner.nextLine();
 
 

@@ -54,7 +54,7 @@ public class StudentStorage {
     }
 
     public int getSize() {
-        return size+1;
+        return size + 1;
     }
 
     public void changeLesson(int indexName) {
