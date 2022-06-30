@@ -1,19 +1,22 @@
-package homework.student;
+package homework.student.storage;
+
+import homework.student.model.Lesson;
+
 
 import java.util.Scanner;
 
-public class StudentStorage {
+public class LessonStorage {
     private static Scanner scanner = new Scanner(System.in);
 
-    private Student[] array = new Student[10];
+    private Lesson[] array = new Lesson[10];
     private int size = -1;
 
 
-    public void add(Student student) {
+    public void add(Lesson lesson) {
         if (size == array.length) {
             extend();
         }
-        array[++size] = student;
+        array[++size] = lesson;
     }
 
 
@@ -26,7 +29,7 @@ public class StudentStorage {
 
     private void extend() {
         if (size == array.length) {
-            Student[] temp = new Student[array.length + 10];
+            Lesson[] temp = new Lesson[array.length + 10];
             for (int i = 0; i < size; i++) {
                 temp[i] = array[i];
             }
@@ -45,22 +48,16 @@ public class StudentStorage {
         }
     }
 
-    public void printStudentByLessonName(String lessonName) {
-        for (int i = 0; i < size; i++) {
-            if (array[i].getLesson().equals(lessonName)) {
-                System.out.println(array[i]);
-            }
-        }
-    }
 
     public int getSize() {
         return size + 1;
     }
 
-    public void changeLesson(int indexName) {
-        array[indexName].setLesson(scanner.nextLine());
-        System.out.println(array[indexName]);
-
+    public Lesson getLessonByIndex(int indexName) {
+        if (indexName < 0 || indexName >= size) {
+            return null;
+        }
+        return array[indexName];
     }
 }
 
