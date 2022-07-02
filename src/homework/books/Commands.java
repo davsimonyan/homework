@@ -9,4 +9,18 @@ public interface Commands {
     int ADD_PRINT_BOOKS_BY_GENRE = 4;
     int ADD_PRINT_BOOKS_BY_PRICE_RANGE = 5;
     int PRINT_ARRAY = 6;
+    int ADD_AUTHOR = 7;
+    int PRINT_ARRAY_AUTHOR = 8;
+
+   static void printCommands(){
+       System.out.println("please input " + EXIT + " for exit");
+       System.out.println("please input " + ADD_BOOK + " for add book");
+       System.out.println("please input " + ADD_PRINT_ALL_BOOKS + " for print all books");
+       System.out.println("please input " + ADD_PRINT_BOOKS_AUTHOR_NAME + " for print Books by AuthorName");
+       System.out.println("please input " + ADD_PRINT_BOOKS_BY_GENRE + " for print Books by Genre");
+       System.out.println("please input " + ADD_PRINT_BOOKS_BY_PRICE_RANGE + " for print books by price range");
+       System.out.println("please input " + PRINT_ARRAY + " for print array");
+       System.out.println("please input " + ADD_AUTHOR + " for add author");
+       System.out.println("please input " + PRINT_ARRAY_AUTHOR + " for print authorArray");
+    }
 }

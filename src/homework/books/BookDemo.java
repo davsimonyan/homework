@@ -5,22 +5,20 @@ import java.util.Scanner;
 public class BookDemo implements Commands {
     private static Scanner scanner = new Scanner(System.in);
     private static BookStorage bookStorage = new BookStorage();
+    private static AuthorStorage authorStorage = new AuthorStorage();
+    private static Author author = new Author();
 
     public static void main(String[] args) {
         bookStorage.add(new Book("Vardananq", "Derenik Demirjyan", 450, 6, "history"));
         bookStorage.add(new Book("Samvel", "Raffi", 400, 4, "history"));
         bookStorage.add(new Book("Romeo & Juliet", "William Shakespeare", 750.50, 5, "drama"));
 
+        authorStorage.add(new Author("Poxos", "Poxosyan", "poxos@mail.ru", "Male"));
+        authorStorage.add(new Author("Martiros", "Martirosyan", "martiros@mail.ru", "Male"));
+        authorStorage.add(new Author("Malena", "Maloyan", "malena@mail.ru", "Female"));
         boolean run = true;
         while (run) {
-            System.out.println("please input " + EXIT + " for exit");
-            System.out.println("please input " + ADD_BOOK + " for add book");
-            System.out.println("please input " + ADD_PRINT_ALL_BOOKS + " for print all books");
-            System.out.println("please input " + ADD_PRINT_BOOKS_AUTHOR_NAME + " for print Books by AuthorName");
-            System.out.println("please input " + ADD_PRINT_BOOKS_BY_GENRE + " for print Books by Genre");
-            System.out.println("please input " + ADD_PRINT_BOOKS_BY_PRICE_RANGE + " for print books by price range");
-            System.out.println("please input " + PRINT_ARRAY + " for print array");
-
+            Commands.printCommands();
             int command = Integer.parseInt(scanner.nextLine());
 
             switch (command) {
@@ -51,6 +49,12 @@ public class BookDemo implements Commands {
                 case PRINT_ARRAY:
                     bookStorage.print();
                     break;
+                case ADD_AUTHOR:
+                    addAuthor();
+                    break;
+                case PRINT_ARRAY_AUTHOR:
+                    authorStorage.print();
+                    break;
                 default:
                     System.err.println("Invalid command");
             }
@@ -73,4 +77,36 @@ public class BookDemo implements Commands {
         Book book = new Book(title, authorName, price, count, genre);
         bookStorage.add(book);
     }
+
+
+    private static void addAuthor() {
+        System.out.println("Please input author name");
+        String name = scanner.nextLine();
+        System.out.println("Please input author surname");
+        String surname = scanner.nextLine();
+        System.out.println("Please input author email");
+        String email = scanner.nextLine();
+        System.out.println("Please input gender");
+        String gender = genderAuthor();
+
+        Author author = new Author(name, surname, email, gender);
+        authorStorage.add(author);
+    }
+
+    private static String genderAuthor() {
+
+        authorStorage.print();
+        System.out.println("1 Male | 2 Female");
+        int index = Integer.parseInt(scanner.nextLine());
+        if (index != 1 && index != 2) {
+            System.out.println("Invalid commands");
+            genderAuthor();
+        } else if (index == 1) {
+            author.setGender("Male");
+        } else {
+            author.setGender("Female");
+        }
+        return author.getGender();
+    }
 }
+

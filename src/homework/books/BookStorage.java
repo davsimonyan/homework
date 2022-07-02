@@ -6,6 +6,8 @@ import java.util.Scanner;
 public class BookStorage {
 
 
+    private static Author author = new Author();
+
     private static Scanner scanner = new Scanner(System.in);
     private static Book book = new Book();
 
