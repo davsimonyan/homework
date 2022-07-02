@@ -1,5 +1,11 @@
 package homework.books;
 
+import homework.books.commands.Commands;
+import homework.books.model.Author;
+import homework.books.model.Book;
+import homework.books.storage.AuthorStorage;
+import homework.books.storage.BookStorage;
+
 import java.util.Scanner;
 
 public class BookDemo implements Commands {

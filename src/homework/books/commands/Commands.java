@@ -1,4 +1,4 @@
-package homework.books;
+package homework.books.commands;
 
 public interface Commands {
 

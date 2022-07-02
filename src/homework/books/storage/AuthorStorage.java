@@ -1,7 +1,6 @@
-package homework.books;
+package homework.books.storage;
 
-import homework.student.model.Lesson;
-import homework.student.model.Student;
+import homework.books.model.Author;
 
 public class AuthorStorage {
 

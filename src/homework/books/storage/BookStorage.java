@@ -1,5 +1,8 @@
-package homework.books;
+package homework.books.storage;
 
+
+import homework.books.model.Author;
+import homework.books.model.Book;
 
 import java.util.Scanner;
 
