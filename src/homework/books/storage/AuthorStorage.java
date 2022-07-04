@@ -2,7 +2,10 @@ package homework.books.storage;
 
 import homework.books.model.Author;
 
+import java.util.Scanner;
+
 public class AuthorStorage {
+    Scanner scanner=new Scanner(System.in);
 
     private static Author author = new Author();
 
@@ -40,6 +43,16 @@ public class AuthorStorage {
             return null;
         }
         return array[indexName];
+    }
+    public void printAuthorByEmail() {
+        for (int i = 0; i <= size; i++) {
+            if (!array[i].getEmail().equals(scanner.nextLine())) {
+                System.out.println("Invalid commands");
+                printAuthorByEmail();
+            }else {
+                System.out.println(array[i].getName());
+            }
+        }
     }
 
     public int getSize() {
