@@ -63,6 +63,7 @@ public class BookDemo implements Commands {
                     break;
                 case PRINT_AUTHOR_BY_EMAIL:
                     authorStorage.printAuthorByEmail();
+                    break;
                 default:
                     System.err.println("Invalid command");
             }
