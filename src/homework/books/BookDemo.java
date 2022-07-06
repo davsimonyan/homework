@@ -52,11 +52,14 @@ public class BookDemo implements Commands {
                     bookStorage.PrintBooksByPriceRange(genre);
                     break;
                 case ADD_PRINT_BOOKS_BY_PRICE_RANGE:
-                    String priceStr = scanner.nextLine();
-                    String priceStr1 = scanner.nextLine();
-                    int price = Integer.parseInt(priceStr);
-                    int price1 = Integer.parseInt(priceStr1);
-                    bookStorage.booksByPriceRange(price, price1);
+                    try {
+                        int price = Integer.parseInt(scanner.nextLine());
+                        int price1 = Integer.parseInt(scanner.nextLine());
+                        bookStorage.booksByPriceRange(price, price1);
+                    } catch (NumberFormatException e) {
+                        System.err.println("Invalid command");
+                    }
+
                     break;
                 case PRINT_ARRAY:
                     bookStorage.print();
