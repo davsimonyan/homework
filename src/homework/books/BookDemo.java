@@ -3,7 +3,7 @@ package homework.books;
 import homework.books.commands.Commands;
 import homework.books.model.Author;
 import homework.books.model.Book;
-import homework.books.storage.AuthorNotFoundException;
+import homework.books.exception.AuthorNotFoundException;
 import homework.books.storage.AuthorStorage;
 import homework.books.storage.BookStorage;
 
