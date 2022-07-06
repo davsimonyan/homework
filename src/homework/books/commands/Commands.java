@@ -12,6 +12,7 @@ public interface Commands {
     int ADD_AUTHOR = 7;
     int PRINT_ARRAY_AUTHOR = 8;
     int PRINT_AUTHOR_BY_EMAIL = 9;
+    int PRINT_INDEX_AUTHOR_NAME = 10;
 
    static void printCommands(){
        System.out.println("please input " + EXIT + " for exit");
@@ -24,5 +25,6 @@ public interface Commands {
        System.out.println("please input " + ADD_AUTHOR + " for add author");
        System.out.println("please input " + PRINT_ARRAY_AUTHOR + " for print authorArray");
        System.out.println("please input " + PRINT_AUTHOR_BY_EMAIL + " for print authorEmail");
+       System.out.println("please input " + PRINT_INDEX_AUTHOR_NAME + " for print index authorName");
     }
 }

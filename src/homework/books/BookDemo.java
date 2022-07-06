@@ -3,6 +3,7 @@ package homework.books;
 import homework.books.commands.Commands;
 import homework.books.model.Author;
 import homework.books.model.Book;
+import homework.books.storage.AuthorNotFoundException;
 import homework.books.storage.AuthorStorage;
 import homework.books.storage.BookStorage;
 
@@ -25,7 +26,12 @@ public class BookDemo implements Commands {
         boolean run = true;
         while (run) {
             Commands.printCommands();
-            int command = Integer.parseInt(scanner.nextLine());
+            int command;
+            try {
+                command = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                command = -1;
+            }
 
             switch (command) {
                 case EXIT:
@@ -63,6 +69,16 @@ public class BookDemo implements Commands {
                     break;
                 case PRINT_AUTHOR_BY_EMAIL:
                     authorStorage.printAuthorByEmail();
+                    break;
+                case PRINT_INDEX_AUTHOR_NAME:
+                    int index;
+                    try {
+                        System.out.println("Please input index author");
+                        index = Integer.parseInt(scanner.nextLine());
+                        System.out.println(bookStorage.printIndexAuthorName(index));
+                    } catch (AuthorNotFoundException | NumberFormatException e) {
+                        System.err.println("Please choose correct number or index!!!");
+                    }
                     break;
                 default:
                     System.err.println("Invalid command");

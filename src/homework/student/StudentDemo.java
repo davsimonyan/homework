@@ -28,7 +28,13 @@ public class StudentDemo implements Commands {
         boolean run = true;
         while (run) {
             Commands.printCommands();
-            int command = Integer.parseInt(scanner.nextLine());
+            int command;
+            try {
+                command = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                command = -1;
+            }
+
             switch (command) {
                 case EXIT:
                     run = false;

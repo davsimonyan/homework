@@ -74,4 +74,12 @@ public class BookStorage {
 
         }
     }
+
+    public String printIndexAuthorName(int index) {
+        if (index < 0 || index > size) {
+            throw new AuthorNotFoundException(index + " not found");
+        }
+        return array[index].getAuthorName();
+    }
 }
+
