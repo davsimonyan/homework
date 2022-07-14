@@ -16,6 +16,13 @@ public class BookDemo implements Commands {
     private static Author author = new Author();
 
     public static void main(String[] args) {
+        initData();
+
+        System.out.println("Pleas input login and password");
+        commands(scanner.nextLine(), scanner.nextLine());
+    }
+
+    private static void initData() {
         bookStorage.add(new Book("Vardananq", "Derenik Demirjyan", 450, 6, "history"));
         bookStorage.add(new Book("Samvel", "Raffi", 400, 4, "history"));
         bookStorage.add(new Book("Romeo & Juliet", "William Shakespeare", 750.50, 5, "drama"));
@@ -23,9 +30,6 @@ public class BookDemo implements Commands {
         authorStorage.add(new Author("Poxos", "Poxosyan", "poxos@mail.ru", "Male"));
         authorStorage.add(new Author("Martiros", "Martirosyan", "martiros@mail.ru", "Male"));
         authorStorage.add(new Author("Malena", "Maloyan", "malena@mail.ru", "Female"));
-
-        System.out.println("Pleas input login and password");
-        commands(scanner.nextLine(), scanner.nextLine());
     }
 
     private static void addBook() {
