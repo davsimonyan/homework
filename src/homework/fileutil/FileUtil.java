@@ -11,10 +11,10 @@ public class FileUtil {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
-        // fileSearch();
-        // contentSearch();
-//         findLines();
-//        printSizeOfPackage();
+        fileSearch();
+        contentSearch();
+        findLines();
+        printSizeOfPackage();
         createFileWithContent();
     }
 
