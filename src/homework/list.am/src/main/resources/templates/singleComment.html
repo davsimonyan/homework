@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Item</title>
+</head>
+<body>
+<a href="/comment">Back</a>
+<h2 th:text="${comment.comment}"></h2>
+<span th:if="${comment.item != null}" th:text="${comment.item.title}"></span>
+</body>
+</html>
