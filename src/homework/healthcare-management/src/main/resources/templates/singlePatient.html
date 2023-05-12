@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Patient</title>
+</head>
+<body>
+<a href="/patients">Back</a>
+<table border="1px">
+    <tr>
+        <th>name</th>
+        <th>surname</th>
+        <th>birthday</th>
+    </tr>
+    <td th:text="${patient.name}"></td>
+    <td th:text="${patient.surname}"></td>
+    <td><span th:text="${patient.birthday }"></span></td>
+</table>
+</body>
+</html>

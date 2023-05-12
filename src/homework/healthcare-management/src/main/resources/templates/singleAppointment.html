@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Single Appointment</title>
+</head>
+<body>
+<a href="/appointments">Back</a>
+<table border="1px">
+    <tr>
+        <th>doctor</th>
+        <th>patient</th>
+    </tr>
+    <td><span th:if="${appointment.doctor != null}" th:text="${appointment.doctor.name}"></span></td>
+    <td><span th:if="${appointment.patient != null}" th:text="${appointment.patient.name}"></span></td>
+</table>
+</body>
+</html>

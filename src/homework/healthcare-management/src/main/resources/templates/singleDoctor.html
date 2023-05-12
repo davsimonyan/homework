@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Single doctor</title>
+</head>
+<body>
+<a href="/doctors">Back</a>
+<table border="1px">
+    <tr>
+        <th>name</th>
+        <th>surname</th>
+        <th>email</th>
+        <th>specialty</th>
+        <th>phoneNumber</th>
+    </tr>
+    <td th:text="${doctor.name}"></td>
+    <td th:text="${doctor.surname}"></td>
+    <td th:text="${doctor.email}"></td>
+    <td th:text="${doctor.specialty}"></td>
+    <td th:text="${doctor.phoneNumber}"></td>
+    <img th:if="${doctor.getProfilePic() != null}" th:src="@{/getImage(imageName=${doctor.getProfilePic()})}" width="400">
+</table>
+</body>
+</html>

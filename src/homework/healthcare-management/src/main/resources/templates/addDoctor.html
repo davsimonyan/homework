@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Doctor</title>
+</head>
+<body>
+<form action="/doctors/add" method="post" enctype="multipart/form-data">
+    <table border="1px">
+        <tr>
+            <th>name<input type="text" name="name"></th>
+            <th>surname<input type="text" name="surname"></th>
+            <th>email<input type="text" name="email"></th>
+            <th>specialty <input type="text" name="specialty"></th>
+            <th>phoneNumber <input type="text" name="phoneNumber"></th>
+        </tr>
+        <input type="file" name="image">
+        <input type="submit" value="create">
+    </table>
+</form>
+</body>
+</html>
